@@ -1,0 +1,56 @@
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Vote with no issues!
+                    </h1>
+                    <p class="lead text-white-50 mb-4">The voting process has never been easier and more compact, but make sure to read the rules of voting!</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a class="btn btn-danger btn-lg px-4 me-sm-3" id="download-button" >Download Rules</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Features section-->
+<section class="py-5 border-bottom" id="features">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="d-flex justify-content-center align-items-center bg-danger text-white p-3 rounded" style="width: 100px; height: 100px;"><i class="bi bi-building fs-1"></i></div>
+                <h2 class="h4 fw-bolder">Start voting</h2>
+                <p>Do you think you are ready to start your contribution to the society? Just click the button below, and start voting for your favourite politicians!</p>
+                <a class="text-decoration-none text-danger" href="#vote">
+                    Vote
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="d-flex justify-content-center align-items-center bg-danger text-white p-3 rounded" style="width: 100px; height: 100px;"><i class="bi bi-toggles2 fs-1"></i></div>
+                <h2 class="h4 fw-bolder">View candidates</h2>
+                <p>Do you want to see the list of all candidates along with the party that they represent? Just click the button below, and examine all of the candidates!</p>
+                <a class="text-decoration-none text-danger" href="#candidates">
+                    View candidates
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-center align-items-center bg-danger text-white p-3 rounded" style="width: 100px; height: 100px;"><i class="bi bi-envelope fs-1"></i></div>
+                <h2 class="h4 fw-bolder">Contact us</h2>
+                <p>Do you have a certain problem with voting, or overall experience with our website? Just click the button below, and fill out the form with your problem!</p>
+                <a class="text-decoration-none text-danger" href="#contact">
+                    Contact
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $("#download-button").on("click", function(){
+        toastr.info("The Voting Rules document will be available soon!");
+    });
+</script>
