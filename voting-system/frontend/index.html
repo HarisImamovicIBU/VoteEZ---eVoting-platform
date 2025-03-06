@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>VoteEZ</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../frontend/assets/img/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="../frontend/assets/css/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../frontend/assets/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <!-- Spapp CSS-->
+        <link href="../frontend/assets/css/spapp.css" rel="stylesheet" media="screen"/>
+        <!-- Select2 CSS-->
+        <link href="../frontend/assets/css/select2.min.css" rel="stylesheet" media="screen">
+        <!-- Toastr CSS-->
+        <link href="../frontend/assets/css/toastr.min.css" rel="stylesheet">
+        <!-- DataTable CSS-->
+        <link href="../frontend/assets/css/datatables.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#home">VoteEZ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link fs-5" aria-current="page" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="#vote">Vote</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="#candidates">Candidates</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="#login" id="logoutButton">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <main id="spapp" role="main">
+        <section id="register" data-load="register.html"></section>
+        <section id="login" data-load="login.html"></section>
+        <section id="home" data-load="home.html"></section>
+        <section id="candidates" data-load="candidates.html"></section>
+        <section id="vote" data-load="vote.html"></section>
+        <section id="contact" data-load="contact.html"></section>
+    </main>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark ms-auto">
+            <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; VoteEZ</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="../frontend/assets/js/bootstrap.bundle.min.js"></script>
+        <!-- JQuery-->
+        <script src="../frontend/assets/js/jquery-3.7.1.min.js"></script>
+        <!-- DataTable JS-->
+        <script src="../frontend/assets/js/datatables.min.js"></script>
+        <!-- Jquery validation-->
+        <script src="../frontend/assets/js/jquery.validate.min.js"></script>
+        <!-- Jquery BlockUI-->
+        <script src="../frontend/assets/js/jquery.blockUI.js"></script>
+        <!-- JQuery Spapp-->
+        <script src="../frontend/assets/js/jquery.spapp.min.js"></script>
+        <!-- Select2 JS-->
+        <script src="../frontend/assets/js/select2.min.js"></script>
+        <!-- Toastr JS-->
+        <script src="../frontend/assets/js/toastr.min.js"></script>
+        <!-- Utils-->
+        <script src="../frontend/utils/utils.js"></script>
+        <script>
+            Utils.init_spapp();
+        </script>
+    </body>
+</html>
