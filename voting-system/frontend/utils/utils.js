@@ -55,7 +55,14 @@ var Utils = {
                                 <td>${candidate.age}</td>
                                 <td>${candidate.political_party}</td>
                                 <td>${candidate.motto}</td>
-                               </tr>`;
+                                <td class="align-middle text-center">
+                                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                                        <button type="button" class="btn btn-success btn-sm" id="admin-view-button" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button>
+                                        <button type="button" class="btn btn-info btn-sm" id="admin-edit-button" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
+                                        <button type="button" class="btn btn-danger btn-sm" id="admin-delete-button" data-bs-toggle="modal" data-bs-target="#exampleModal3">Delete</button>
+                                    </div>
+                                </td>
+                           </tr>`;
                     tableBody.append(row);
                 });
                 console.log(counter);
