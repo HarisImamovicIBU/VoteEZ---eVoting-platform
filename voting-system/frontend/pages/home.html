@@ -23,10 +23,14 @@
                 <div class="d-flex justify-content-center align-items-center bg-danger text-white p-3 rounded" style="width: 100px; height: 100px;"><i class="bi bi-building fs-1"></i></div>
                 <h2 class="h4 fw-bolder">Start voting</h2>
                 <p>Do you think you are ready to start your contribution to the society? Just click the button below, and start voting for your favourite politicians!</p>
-                <a class="text-decoration-none text-danger" href="#vote">
-                    Vote
-                    <i class="bi bi-arrow-right"></i>
-                </a>
+                <div class="d-flex">
+                    <a class="text-decoration-none text-danger" href="#vote">
+                        Vote <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a class="text-decoration-none text-danger ms-5" id="admin-view-votes" data-bs-toggle="modal" data-bs-target="#exampleModal4" href="#">
+                        View votes <i class="bi bi-arrow-right"></i> <!-- Will open up a modal with list of votes. Later, will be removed for regular users, only being visible to admins-->
+                    </a>
+                </div>     
             </div>
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <div class="d-flex justify-content-center align-items-center bg-danger text-white p-3 rounded" style="width: 100px; height: 100px;"><i class="bi bi-toggles2 fs-1"></i></div>
@@ -43,9 +47,26 @@
                 <p>Do you have a certain problem with voting, or overall experience with our website? Just click the button below, and fill out the form with your problem!</p>
                 <a class="text-decoration-none text-danger" href="#contact">
                     Contact
-                    <i class="bi bi-arrow-right"></i>
+                    <i class="bi bi-arrow-right "></i>
                 </a>
             </div>
+        </div>
+    </div>
+      <!-- Modal for viewing votes-->
+      <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">View votes</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--Load votes data from db table user_candidates-->
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
         </div>
     </div>
 </section>
