@@ -73,4 +73,9 @@ class BaseDao{
     public function get_all(){
         return $this->query("SELECT * FROM " . $this->table_name, []);
     }
+
+    //Method for getting entity by id from a database table
+    public function get_by_id($id){
+        return $this->query_unique("SELECT * FROM " . $this->table_name . " WHERE id=:id", ['id' => $id]);
+    }
 }
