@@ -1,8 +1,15 @@
 <?php
 
-//ChatGPT fix za CORS Access-Control-Allow-Origin error
-// CORS Headers
-header("Access-Control-Allow-Origin: http://127.0.0.1:5501");
+// Dynamic CORS headers
+$allowedOrigins = [
+    "http://127.0.0.1:5501",
+    "https://stingray-app-4n5gc.ondigitalocean.app"
+];
+
+if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
+    header("Access-Control-Allow-Origin: " . $_SERVER['HTTP_ORIGIN']);
+} 
+
 header("Access-Control-Allow-Methods: GET, POST, PATCH, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authentication");
 
