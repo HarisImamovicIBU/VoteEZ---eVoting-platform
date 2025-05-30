@@ -1,5 +1,5 @@
 var Constants={
-    PROJECT_BASE_URL: location.hostname=="localhost" ? "http://localhost:80/Web-Programming/voting-system/backend/" : "https://stingray-app-4n5gc.ondigitalocean.app/backend",
+    PROJECT_BASE_URL: location.hostname=="localhost" ? "http://localhost:80/Web-Programming/voting-system/backend/" : "https://stingray-app-4n5gc.ondigitalocean.app/backend/",
     USER_ROLE: "voter", 
     ADMIN_ROLE: "admin"
 }
