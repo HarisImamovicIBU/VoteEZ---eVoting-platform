@@ -3,7 +3,7 @@
 // Dynamic CORS headers
 $allowedOrigins = [
     "http://127.0.0.1:5501",
-    "https://stingray-app-4n5gc.ondigitalocean.app"
+    "https://stingray-app-4n5gc.ondigitalocean.app",
 ];
 
 if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
