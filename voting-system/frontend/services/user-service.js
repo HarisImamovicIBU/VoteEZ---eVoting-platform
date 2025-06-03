@@ -5,12 +5,72 @@ var UserService = {
         window.location.replace("index.html");
       }
       $("#loginForm").validate({
+        rules: {
+          email: {
+            required: true,
+            email: true
+          },
+          password: {
+            required: true
+          },
+          phone: {
+            required: true,
+            digits: true
+        }
+        },
+        messages: {
+          email:{
+            required: "Please enter your email",
+            email: "Please enter a valid email address"
+          },
+          password:{
+            required: "Please enter your password"
+          },
+          phone:{
+            required: "Please enter your phone number",
+            digits: "Phone number must contain only digits"
+          }
+        },
         submitHandler: function (form) {
           var entity = Object.fromEntries(new FormData(form).entries());
           UserService.login(entity);
         },
       });
       $("#registerForm").validate({
+        rules: {
+          name: {
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          password: {
+            required: true,
+            minlength: 6
+          },
+          phone: {
+            required: true,
+            digits: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Please enter your name"
+          },
+          email: {
+            required: "Please enter your email",
+            email: "Please enter a valid email"
+          },
+          password: {
+            required: "Please enter a password",
+            minlength: "Password must be at least 6 characters"
+          },
+          phone: {
+            required: "Please enter your phone number",
+            digits: "Phone number must contain only digits"
+          }
+        },
         submitHandler: function (form) {
           var entity = Object.fromEntries(new FormData(form).entries());
           UserService.register(entity);

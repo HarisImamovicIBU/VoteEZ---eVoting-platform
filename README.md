@@ -1,4 +1,6 @@
 # Web-Programming
+Link for the deployed application: https://stingray-app-4n5gc.ondigitalocean.app
+
 VoteEZ is a web-based application that enables secure, efficient and easy electronic voting.
 The creation of VoteEZ is divided into 5 different milestones:
 1. Initial Setup and Frontend Development

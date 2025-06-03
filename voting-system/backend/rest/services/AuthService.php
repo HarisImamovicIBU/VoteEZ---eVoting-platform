@@ -40,12 +40,9 @@ class AuthService extends BaseService {
         if(!$user){
             return ['success' => false, 'error' => 'Invalid email.'];
         }
-        if(!$user || !password_verify($entity['password'], $user['password']))
-            return ['success' => false, 'error' => 'Invalid email or password.'];
+        if(!$user || !password_verify($entity['password'], $user['password']) || $entity['phone']!=$user['phone'])
+            return ['success' => false, 'error' => 'Invalid login credentials.'];
 
-        if(!$user || $entity['phone']!=$user['phone']){
-            return ['success' => false, 'error' => 'Invalid email or phone.'];
-        }
         unset($user['password']);
         
         $jwt_payload = [
