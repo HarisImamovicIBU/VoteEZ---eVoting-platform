@@ -13,9 +13,8 @@ if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowed
 header("Access-Control-Allow-Methods: GET, POST, PATCH, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authentication");
 
-// Respond to preflight OPTIONS request and exit early
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-    http_response_code(204); // No Content
+    http_response_code(204);
     exit();
 } 
 require "./vendor/autoload.php";
