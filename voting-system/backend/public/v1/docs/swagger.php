@@ -5,7 +5,7 @@ require __DIR__ . '/../../../vendor/autoload.php';
 if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.0.1'){
     define('BASE_URL', 'http://localhost:80/Web-Programming/voting-system/backend/');
 } else {
-    define('BASE_URL', 'update_when_deployed');
+    define('BASE_URL', 'https://voteez-evoting-platform-production.up.railway.app/');
 }
 
 $openapi = \OpenApi\Generator::scan([
