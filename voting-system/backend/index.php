@@ -3,7 +3,7 @@
 // Dynamic CORS headers
 $allowedOrigins = [
     "http://127.0.0.1:5501",
-    "https://vote-ez-e-voting-platform.vercel.app/",
+    "https://vote-ez-e-voting-platform.vercel.app",
 ];
 
 if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
