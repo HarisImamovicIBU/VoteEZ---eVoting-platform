@@ -1,4 +1,10 @@
 <?php
+if ($_SERVER['REQUEST_URI'] === '/' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    http_response_code(200);
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'healthy', 'service' => 'VoteEZ Backend']);
+    exit;
+}
 
 // Dynamic CORS headers
 $allowedOrigins = [
@@ -17,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     http_response_code(204);
     exit();
 } 
+
 require "./vendor/autoload.php";
 require "rest/services/CandidateService.php";
 require "rest/services/UserService.php";
