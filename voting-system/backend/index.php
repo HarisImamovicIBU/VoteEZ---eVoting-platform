@@ -1,4 +1,6 @@
 <?php
+/*Testing backend deployment and healthchecks*/
+
 if ($_SERVER['REQUEST_URI'] === '/' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     http_response_code(200);
     header('Content-Type: application/json');
